@@ -36,7 +36,7 @@
 
     $('#yesButton').click(function(){ //user clicked the yes button
     
-    myDataRef.set({id: "yelpID", yes: 1, total: 1});
+      //myDataRef.set({id: "yelpID", yes: 1, total: 1});
       myDataRef.orderByValue().once('value', function(snapshot){
       
       snapshot.forEach(function(data){
