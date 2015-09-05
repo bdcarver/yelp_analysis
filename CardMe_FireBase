@@ -1,0 +1,42 @@
+<html>
+  <head>
+	<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  </head>
+  <body>
+  	<script>
+
+  	var myDataRef = new Firebase('https://cardme.firebaseio.com/');
+
+  	$('#yesButton').click(function{ //user clicked the yes button
+
+  	myDataRef.orderByValue().once('value', function(snapshot)){
+  		snapshot.forEach(function(data)){
+  			if (data.identity == id){
+  				data.update({'yes': (data.yes)++, 'total': (data.total)++});
+  				break;
+			}
+			else {
+			myDataRef.set({id: "yelpID", yes: 1, total: 1}) //need to replace yelpID with the actual ID from the API
+			break;
+			}
+  		}
+  	});
+  		
+	$('#noButton').click(function{ //user clicked the no button
+	
+	myDataRef.orderByValue().once('value', function(snapshot)){
+		snapshot.forEach(function(data)){
+  			if (data.identity == id){
+  				data.update({'total': (data.total)++});
+  				break;
+			}
+			else {
+			myDataRef.set({id: "yelpID", yes: 0, total: 1}) //need to replace yelpID with the actual ID from the API
+			break;
+			}
+  		}
+  	});
+
+  	</script>
+  </body>
+</html>
