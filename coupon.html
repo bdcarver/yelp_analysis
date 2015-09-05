@@ -1,0 +1,55 @@
+<html>
+    <head>
+    	<meta charset="UTF-8">
+        <title>coupon</title>
+
+    </head>
+
+<script>
+
+function generateCoupon(){
+
+//65-90
+
+var type = Math.floor((Math.random() * 2) + 1);
+
+var firstString = "";
+var secondString = "";
+var mid = "";
+
+if (type == 1) {
+	var firstChar = String(Math.floor(Math.random() * 10));
+	var secondChar = String(Math.floor(Math.random() * 10));
+	firstString+=firstChar;
+	firstString+=secondChar;
+	var fourthChar = String.fromCharCode(Math.floor(Math.random() * 25) +65);
+	var fifthChar = String.fromCharCode(Math.floor(Math.random() * 25) +65);
+	secondString+=fourthChar;
+	secondString+=fifthChar;
+	mid = String(Math.floor(Math.random() * 10));
+	firstString+=mid;
+	firstString+=secondString;
+	
+} else {
+	var firstChar = String.fromCharCode(Math.floor(Math.random() * 25) +65);
+	var secondChar = String.fromCharCode(Math.floor(Math.random() * 25) +65);
+	firstString+=firstChar;
+	firstString+=secondChar;
+	var thirdChar = String(Math.floor(Math.random() * 10));
+	var fourthChar = String(Math.floor(Math.random() * 10));
+	mid = String.fromCharCode(Math.floor(Math.random() * 25) +65);
+	secondString+=thirdChar;
+	secondString+=fourthChar;
+	firstString+=mid;
+	firstString+=secondString;
+
+}
+
+return firstString;
+
+}
+
+generateCoupon();
+
+</script>
+</html>
