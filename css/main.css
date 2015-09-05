@@ -101,8 +101,13 @@
 	margin-top: 150px; 
 	padding-bottom: 10px;
 }
-footer a{
+#babyText{
+	text-align: center;
+	padding-top: 20px;
+	margin: 0;
 	font-size: 18px;
+	font-family: 'Bitter', sans-serif;
+	color: white;
 }
 
 
