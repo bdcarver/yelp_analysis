@@ -1,9 +1,10 @@
 .title{
 	text-align: center;
 	font-weight: 100;
-	font-family: "Lobster", cursive;
+	font-size: 60px;
 	color: #ddd;
-	padding-top: 25px;
+	font-family: "Lobster";
+	margin-top: 10px;
 }
 #cardedText{
 	font-weight: 300;
@@ -13,9 +14,17 @@
 	padding-top: 20px;
 	margin: 0;
 	font-size: 40px;
+	font-family: 'Bitter', sans-serif;
+	letter-spacing: -1px;
 }
 #cardedBox{
-	background-color: rgba(200,200,200,8);
+	background: #de6262; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #de6262 0%, #ffb88c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#de6262), color-stop(100%,#ffb88c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* IE10+ */
+	background: linear-gradient(135deg, #de6262 0%,#ffb88c 100%); /* W3C */
 	margin-top: 20px;
 	text-align: center;
 	width: 100%;
@@ -24,6 +33,7 @@
 }
 .decision{
 	font-weight: 300;
+	font-family: 'Bitter';
 	border: none;
 	background: transparent;
 	margin-top: 30px;
@@ -49,16 +59,29 @@
 	width: 100%;
 }
 #bgImg{
-	background-image: url("http://insidefandb.com/wp-content/uploads/2013/06/Best-Drink-image-of-bar-by-Jason-Rowan.jpg");
-	height: auto;
-	width: auto;
-	z-index: -1;
-	max-height: 150%;
-	max-width: 150%;
+	background-image: url("http://bar-lab.com/wp-content/themes/bar-lab/images/bg/homepage.jpg");
+	position: fixed;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+}
+#haze{
+	background: #de6262; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #de6262 0%, #ffb88c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#de6262), color-stop(100%,#ffb88c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* IE10+ */
+	background: linear-gradient(135deg, #de6262 0%,#ffb88c 100%); /* W3C */
+	width: 100%;
+	position: fixed;
+	height: 100%;
 
 }
-
-
+#spacer{
+	margin-top: 100px;
+}
 
 
 
