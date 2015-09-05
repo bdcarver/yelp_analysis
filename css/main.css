@@ -3,7 +3,7 @@
 	font-weight: 100;
 	font-family: "Lobster", cursive;
 	color: #ddd;
-	padding: 20px;
+	padding-top: 25px;
 }
 #cardedText{
 	font-weight: 100;
@@ -25,8 +25,12 @@
 .decision{
 	font-family: "Oswald", sans-serif;
 	border: none;
-	background: white;
+	background: transparent;
 	margin-top: 30px;
+	border: 1px solid white;
+	margin-bottom: 20px;
+	font-size: 28px;
+	width: 100px;
 }
 .jumbotron{
 	background: #333;
@@ -34,5 +38,4 @@
 	margin: 0;
 	border: none;
 	border-radius: 0;
-
 }
