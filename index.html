@@ -35,8 +35,10 @@
     var myDataRef = new Firebase('https://cardme.firebaseio.com/');
 
     $('#yesButton').click(function(){ //user clicked the yes button
-
+    
+    myDataRef.set({id: "yelpID", yes: 1, total: 1});
       myDataRef.orderByValue().once('value', function(snapshot){
+      
       snapshot.forEach(function(data){
         //console.log(snapshot.val().yes);
         
@@ -44,9 +46,9 @@
           var yesnext = snapshot.val().yes + 1;
           myDataRef.update({yes: yesnext, total: (snapshot.val().total)+1});
       }
-      else {
-        myDataRef.set({id: "yelpID", yes: 1, total: 1}); //need to replace yelpID with the actual ID from the API
-       }
+      //else {
+         //myDataRef.set({id: "yelpID", yes: 1, total: 1});//need to replace yelpID with the actual ID from the API
+      //}
      })
    })
     });
