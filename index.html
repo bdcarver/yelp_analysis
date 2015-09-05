@@ -45,7 +45,7 @@
           myDataRef.update({yes: yesnext, total: (snapshot.val().total)+1});
       }
       else {
-        myDataRef.push({id: "yelpID", yes: 1, total: 1}); //need to replace yelpID with the actual ID from the API
+        myDataRef.set({id: "yelpID", yes: 1, total: 1}); //need to replace yelpID with the actual ID from the API
        }
      })
    })
@@ -59,7 +59,7 @@
           myDataRef.update({total: (snapshot.val().total)+1});
       }
       else {
-        myDataRef.push({id: "yelpID", yes: 0, total: 1}); //need to replace yelpID with the actual ID from the API
+        myDataRef.set({id: "yelpID", yes: 0, total: 1}); //need to replace yelpID with the actual ID from the API
        }
      })
    })
