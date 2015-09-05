@@ -5,6 +5,7 @@
 	color: #ddd;
 	font-family: "Lobster";
 	color: white;
+	padding-bottom: 75px;
 }
 #cardedText{
 	font-weight: 300;
@@ -98,6 +99,6 @@
 #martini{
 	width: 100px;
 	height: 100px;
-	margin-top: 150px; 
+	margin-top: 75px; 
 	padding-bottom: 10px;
 }
