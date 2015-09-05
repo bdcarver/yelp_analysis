@@ -101,9 +101,8 @@
 	margin-top: 150px; 
 	padding-bottom: 10px;
 }
-#footer{
-	color: white;
-	text-decoration: none;
+footer a{
+	font-size: 18px;
 }
 
 
