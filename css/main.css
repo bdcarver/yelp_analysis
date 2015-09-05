@@ -18,13 +18,14 @@
 	letter-spacing: -1px;
 }
 #cardedBox{
-	background: #de6262; /* Old browsers */
-	background: -moz-linear-gradient(-45deg, #de6262 0%, #ffb88c 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#de6262), color-stop(100%,#ffb88c)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* IE10+ */
-	background: linear-gradient(135deg, #de6262 0%,#ffb88c 100%); /* W3C */
+	/*background: #de6262;
+	background: -moz-linear-gradient(-45deg, #de6262 0%, #ffb88c 100%); 
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#de6262), color-stop(100%,#ffb88c));
+	background: -webkit-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%);
+	background: -o-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); 
+	background: -ms-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); 
+	background: linear-gradient(135deg, #de6262 0%,#ffb88c 100%); */
+	background-color: rgba(220,220,220,.8);
 	margin-top: 20px;
 	text-align: center;
 	width: 100%;
@@ -41,7 +42,7 @@
 	margin-bottom: 20px;
 	font-size: 30px;
 	width: 70px;
-	width: 200px;
+	width: 120px;
 }
 .jumbotron{
 	background: #333;
