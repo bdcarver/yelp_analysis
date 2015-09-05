@@ -1,11 +1,11 @@
 .title{
 	text-align: center;
 	font-weight: 100;
-	font-size: 60px;
+	font-size: 35px;
 	color: #ddd;
 	font-family: "Lobster";
 	color: white;
-	padding-bottom: 75px;
+	padding-bottom: 100px;
 }
 #cardedText{
 	font-weight: 300;
@@ -97,8 +97,8 @@
 	margin-top: 100px;
 }
 #martini{
-	width: 100px;
-	height: 100px;
-	margin-top: 75px; 
+	width: 75px;
+	height: 75px;
+	margin-top: 50px; 
 	padding-bottom: 10px;
 }
