@@ -21,18 +21,17 @@
         <script>
           var myDataRef = new Firebase('https://cardme.firebaseio.com/');
           
-          var percent;
-          
           myDataRef.orderByValue().once('value', function(snapshot){
             snapshot.forEach(function(data){
               var yesInt = snapshot.val().yes;
               var totalInt = snapshot.val().total;
-              percent = (yesInt/totalInt) * 100;
+              var percent = (yesInt/totalInt) * 100;
           
+              document.getElementById("percentage").innerHTML = percent;
               })
           });
           
-          document.getElementById("percentage").innerHTML = percent;
+          
         </script>
         <h2 id="cardedText">percent of users were carded at this establishment.</h2>
         <button class="decision" id="yesButton">Continue</button>
