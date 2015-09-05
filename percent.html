@@ -17,20 +17,22 @@
         <img src="http://i.imgur.com/LF4PLeE.png?1" id="martini">
         <h1 class="title">CardMe</h1>
         <!-- Big percentage -->
-        <h2 id="percent"></h2>
+        <h2 id="percentage"></h2>
         <script>
           var myDataRef = new Firebase('https://cardme.firebaseio.com/');
-      
+          
+          var percent;
+          
           myDataRef.orderByValue().once('value', function(snapshot){
             snapshot.forEach(function(data){
               var yesInt = snapshot.val().yes;
               var totalInt = snapshot.val().total;
-              var percent = (yesInt/totalInt) * 100;
+              percent = (yesInt/totalInt) * 100;
           
               })
           });
           
-          document.getElementById("percent").innerHTML = percent;
+          document.getElementById("percentage").innerHTML = percent;
         </script>
         <h2 id="cardedText">percent of users were carded at this establishment.</h2>
         <button class="decision" id="yesButton">Continue</button>
