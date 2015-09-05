@@ -22,7 +22,7 @@
 	background-image: url('http://www.dolcegabbana.it/martini/wp-content/uploads/2014/06/dolce-gabbana-martini-bar-bistrot-menu-drinks-cocktails.jpg');
 	background-size: cover;
 	background-position: center;
-	margin-bottom: 20px;
+	margin-top: 20px;
 	text-align: center;
 	width: 100%;
 	height: 100%;
@@ -99,6 +99,6 @@
 #martini{
 	width: 75px;
 	height: 75px;
-	margin-top: 50px; 
+	margin-top: 10px; 
 	padding-bottom: 10px;
 }
