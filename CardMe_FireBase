@@ -20,7 +20,7 @@
 			break;
 			}
   		}
-  		console.log("" + (yes/total) * 100 + "%")
+  		console.log("" + (yes/total) * 100 + "%");
   	});
   		
 	$('#noButton').click(function{ //user clicked the no button
@@ -36,7 +36,7 @@
 			break;
 			}
   		}
-  		console.log("" + (yes/total) * 100 + "%")
+  		console.log("" + (yes/total) * 100 + "%");
   	});
 	
 	
