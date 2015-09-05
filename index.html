@@ -42,7 +42,8 @@
       snapshot.forEach(function(data){
         //console.log(snapshot.val().yes);
         
-      if (snapshot.val().id == "yelpID"){
+      if (snapshot.val().id != null){
+          var match = snapshot.val().id
           var yesnext = snapshot.val().yes + 1;
           myDataRef.update({yes: yesnext, total: (snapshot.val().total)+1});
       }
