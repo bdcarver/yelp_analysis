@@ -1,4 +1,36 @@
 .title{
 	text-align: center;
 	font-weight: 100;
+	font-family: "Lobster", cursive;
+	color: #ddd;
+	padding: 20px;
+}
+#cardedText{
+	font-weight: 100;
+	text-align: center;
+	margin-top: 50px;
+	font-family: "Oswald", sans-serif;
+	padding: 0;
+	padding-top: 20px;
+	margin: 0;
+}
+#cardedBox{
+	background-color: rgba(200,200,200,8);
+	border: solid 1px #AAAAAA;
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+	
+}
+.decision{
+	font-family: "Oswald", sans-serif;
+	border: none;
+	background: white;
+	margin-top: 30px;
+}
+.jumbotron{
+	background: #333;
+	padding: 0;
+	margin: 0;
+
 }
