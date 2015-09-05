@@ -22,7 +22,7 @@
 	margin-top: 20px;
 	text-align: center;
 	width: 100%;
-	height: 600px;
+	height: 80%;
 	
 }
 .decision{
@@ -33,7 +33,7 @@
 	border: 1px solid white;
 	margin-bottom: 20px;
 	font-size: 30px;
-	width: 200px;
+	width: 70px;
 }
 .jumbotron{
 	background: #333;
@@ -44,4 +44,9 @@
 	position: fixed;
 	width: 100%;
 	height: 100%;
+}
+.box{
+	position: absolute;
+	height: 100%;
+	width: 100%;
 }
