@@ -33,7 +33,7 @@
 
     var myDataRef = new Firebase('https://cardme.firebaseio.com/');
 
-    $('#yesButton').click(function{ //user clicked the yes button
+    $('#yesButton').click(function(){ //user clicked the yes button
 
     myDataRef.orderByValue().once('value', function(snapshot)){
       snapshot.forEach(function(data)){
@@ -48,7 +48,7 @@
       }
     });
       
-  $('#noButton').click(function{ //user clicked the no button
+  $('#noButton').click(function(){ //user clicked the no button
   
   myDataRef.orderByValue().once('value', function(snapshot)){
     snapshot.forEach(function(data)){
