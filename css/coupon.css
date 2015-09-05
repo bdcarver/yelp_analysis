@@ -1,0 +1,113 @@
+.title{
+	text-align: center;
+	font-weight: 100;
+	font-size: 35px;
+	color: #ddd;
+	font-family: "Lobster";
+	color: white;
+	padding-bottom: 50px;
+}
+#cardedText{
+	font-weight: 300;
+	text-align: center;
+	padding: 0;
+	/*padding-top: 40px;*/
+	margin: 0;
+	font-size: 40px;
+	font-family: 'Bitter', sans-serif;
+	letter-spacing: -1px;
+	color: white;
+}
+#cardedBox{
+	background-image: url('http://www.dolcegabbana.it/martini/wp-content/uploads/2014/06/dolce-gabbana-martini-bar-bistrot-menu-drinks-cocktails.jpg');
+	background-size: cover;
+	background-position: center;
+	margin-top: 20px;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	
+}
+#cardedBoxHaze{
+ /* background: -webkit-linear-gradient(left top, rgba(35,37,38,.5) ,rgba(65,67,69,.5)); 
+  background: -o-linear-gradient(bottom right, rgba(35,37,38,.5),rgba(65,67,69,.5)); 
+  background: -moz-linear-gradient(bottom right, rgba(35,37,38,.5),rgba(65,67,69,.5));
+  background: linear-gradient(to bottom right, rgba(35,37,38,.5),rgba(65,67,69,.5));*/
+  background: -webkit-linear-gradient(45deg, #ccc 10%, #777 90%); /* Chrome 10+, Saf5.1+ */
+  background:    -moz-linear-gradient(45deg, #ccc 10%, #777 90%); /* FF3.6+ */
+  background:     -ms-linear-gradient(45deg, #ccc 10%, #777 90%); /* IE10 */
+  background:      -o-linear-gradient(45deg, #ccc 10%, #777 90%); /* Opera 11.10+ */
+  background:         linear-gradient(45deg, #ccc 10%, #777 90%); /* W3C */
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+.decision{
+	font-weight: 300;
+	font-family: 'Bitter';
+	border: none;
+	background: #555;
+	margin-top: 30px;
+	border: 1px solid white;
+	margin-bottom: 20px;
+	font-size: 30px;
+	width: 70px;
+	width: 150px;
+	color: white;
+
+}
+.jumbotron{
+	background: #333;
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+.box{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+#bgImg{
+	background-image: url("http://bar-lab.com/wp-content/themes/bar-lab/images/bg/homepage.jpg");
+	position: fixed;
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+}
+#haze{
+	background: #de6262; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #de6262 0%, #ffb88c 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#de6262), color-stop(100%,#ffb88c)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(-45deg, #de6262 0%,#ffb88c 100%); /* IE10+ */
+	background: linear-gradient(135deg, #de6262 0%,#ffb88c 100%); /* W3C */
+	width: 100%;
+	position: fixed;
+	height: 100%;
+
+}
+#spacer{
+	margin-top: 100px;
+}
+#martini{
+	width: 75px;
+	height: 75px;
+	margin-top: 10px; 
+	padding-bottom: 10px;
+}
+#footer{
+	color: white;
+}
+#bio{
+	color: white;
+	font-size: 22px;
+	font-family: 'Bitter', sans-serif;
+	padding: 40px;
+}	
