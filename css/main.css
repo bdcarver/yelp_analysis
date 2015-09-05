@@ -4,7 +4,6 @@
 	font-size: 60px;
 	color: #ddd;
 	font-family: "Lobster";
-	margin-top: 150px;
 	color: white;
 }
 #cardedText{
@@ -96,8 +95,12 @@
 #spacer{
 	margin-top: 100px;
 }
-
-
+#martini{
+	width: 100px;
+	height: 100px;
+	margin-top: 150px; 
+	padding-bottom: 10px;
+}
 
 
 
