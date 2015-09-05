@@ -5,7 +5,7 @@
 	color: #ddd;
 	font-family: "Lobster";
 	color: white;
-	padding-bottom: 50px;
+	padding: 0;
 }
 #cardedText{
 	font-weight: 300;
@@ -109,5 +109,5 @@
 	color: white;
 	font-size: 22px;
 	font-family: 'Bitter', sans-serif;
-	padding: 40px;
+	padding: 20px;
 }	
