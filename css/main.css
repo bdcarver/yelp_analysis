@@ -16,7 +16,6 @@
 }
 #cardedBox{
 	background-color: rgba(200,200,200,8);
-	border: solid 1px #AAAAAA;
 	margin-top: 20px;
 	text-align: center;
 	width: 100%;
@@ -49,3 +48,24 @@
 	height: 100%;
 	width: 100%;
 }
+#bgImg{
+	background-image: url("http://insidefandb.com/wp-content/uploads/2013/06/Best-Drink-image-of-bar-by-Jason-Rowan.jpg");
+	height: auto;
+	width: auto;
+	z-index: -1;
+	max-height: 150%;
+	max-width: 150%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
