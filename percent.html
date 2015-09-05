@@ -21,7 +21,7 @@
         <script>
           var myDataRef = new Firebase('https://cardme.firebaseio.com/');
           
-          myDataRef.orderByValue().once('value', function(snapshot){
+          /*myDataRef.orderByValue().once('value', function(snapshot){
             snapshot.forEach(function(data){
               var yesInt = snapshot.val().yes;
               var totalInt = snapshot.val().total;
@@ -29,7 +29,7 @@
           
               document.getElementById("percentage").innerHTML = percent;
               })
-          });
+          });*/
           
           
         </script>
