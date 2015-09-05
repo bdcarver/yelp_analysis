@@ -14,7 +14,7 @@
 	padding-top: 20px;
 	margin: 0;
 	margin-top: 150px;
-	font-size: 80px;
+	font-size: 60px;
 }
 #cardedBox{
 	background-color: rgba(200,200,200,8);
@@ -32,8 +32,8 @@
 	margin-top: 30px;
 	border: 1px solid white;
 	margin-bottom: 20px;
-	font-size: 50px;
-	width: 300px;
+	font-size: 30px;
+	width: 200px;
 }
 .jumbotron{
 	background: #333;
