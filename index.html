@@ -15,18 +15,54 @@
       <div class="jumbotron">
         <h1 class="title">CardMe</h1>
             <h2 id="cardedText">Were you carded?</h2>
-            <button class="decision">Yes</button>
-            <button class="decision">No</button>
+            <button class="decision" id="yesButton">Yes</button>
+            <button class="decision" id="noButton">No</button>
       </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script type="text/javascript">
     $(document).ready(function(){
         $('.title').hide().fadeIn(1500);
         $('#cardedText').hide().delay(1500).fadeIn(1500);
         $('.decision').hide().delay(1500).fadeIn(1500);
     });
+    </script>
+    <script>
+
+    var myDataRef = new Firebase('https://cardme.firebaseio.com/');
+
+    $('#yesButton').click(function{ //user clicked the yes button
+
+    myDataRef.orderByValue().once('value', function(snapshot)){
+      snapshot.forEach(function(data)){
+        if (data.identity == id){
+          data.update({'yes': (data.yes)++, 'total': (data.total)++});
+          break;
+      }
+      else {
+      myDataRef.set({id: "yelpID", yes: 1, total: 1}) //need to replace yelpID with the actual ID from the API
+      break;
+      }
+      }
+    });
+      
+  $('#noButton').click(function{ //user clicked the no button
+  
+  myDataRef.orderByValue().once('value', function(snapshot)){
+    snapshot.forEach(function(data)){
+        if (data.identity == id){
+          data.update({'total': (data.total)++});
+          break;
+      }
+      else {
+      myDataRef.set({id: "yelpID", yes: 0, total: 1}) //need to replace yelpID with the actual ID from the API
+      break;
+      }
+      }
+    });
+
     </script>
   </body>
 </html>
