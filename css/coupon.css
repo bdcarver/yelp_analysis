@@ -54,6 +54,7 @@
 	width: 70px;
 	width: 150px;
 	color: white;
+	text-align: center;
 
 }
 .jumbotron{
@@ -111,3 +112,6 @@
 	font-family: 'Bitter', sans-serif;
 	padding: 20px;
 }	
+#code{
+	text-align: center;
+}
