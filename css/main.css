@@ -6,7 +6,7 @@
 	padding-top: 25px;
 }
 #cardedText{
-	font-weight: 100;
+	font-weight: 300;
 	text-align: center;
 	margin-top: 50px;
 	padding: 0;
@@ -24,7 +24,7 @@
 	
 }
 .decision{
-	font-weight: 100;
+	font-weight: 300;
 	border: none;
 	background: transparent;
 	margin-top: 30px;
