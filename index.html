@@ -38,8 +38,9 @@
       myDataRef.orderByValue().once('value', function(snapshot){
       snapshot.forEach(function(data){
         //console.log(snapshot.val().yes);
-        var yesnext = snapshot.val().yes + 1;
+        
       if (snapshot.val().id == "yelpID"){
+          var yesnext = snapshot.val().yes + 1;
           myDataRef.update({yes: yesnext, total: (snapshot.val().total)+1});
       }
       else {
