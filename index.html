@@ -18,6 +18,7 @@
         <h2 id="cardedText">Were you carded?</h2>
         <a href="percent.html"><button class="decision" id="yesButton">Yes</button></a>
         <a href="percent.html"><button class="decision" id="noButton">No</button></a>
+        <p id="name">We detect you are at </p>
         <button class="decision" id="change">This is not the establishment I am in</button>
         <h2 id="babyText">By clicking the buttons above, you verify that you are age 21 or older.</h2>
         <p></br></p>
@@ -154,7 +155,6 @@
   'success' : function(data, textStats, XMLHttpRequest) {
   console.log(data);
   $('#name').append(data.businesses[i].name);
-  $('#image').append('<br><img src='+data.businesses[i].image_url+'>');
   var yelpID = data.businesses[i].id;
   $('#change').click(function() {
   i++;
