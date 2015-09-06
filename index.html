@@ -45,9 +45,9 @@
     
       //myDataRef.set({id: "yelpID", yes: 1, total: 1});
       myDataRef.orderByValue().once('value', function(snapshot){
-      
+      console.log(snapshot.val().id);
+
       snapshot.forEach(function(data){
-        console.log(snapshot.val().id);
         console.log(snapshot.val().id == "yelpID");
 
         
