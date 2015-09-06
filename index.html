@@ -42,7 +42,23 @@
     var myDataRef = new Firebase('https://cardme.firebaseio.com/');
 
     $('#yesButton').click(function(){ //user clicked the yes button
-    
+    console.log("test, made it into yes click.");
+    if myDataRef == null{
+      console.log("test, made it into <1 length");
+      myDataRef.push({id: "yelpID", yes: 1, total: 1});//need to replace yelpID with the actual ID from the API
+    }
+    else{
+      console.log("test, made it into >1 else");
+      if (snapshot.val().id == "yelpID"){
+        console.log("test, ID matches.");
+          var yesnext = snapshot.val().yes + 1;
+          myDataRef.update({yes: yesnext, total: (snapshot.val().total)+1});
+      }
+      else{
+        console.log("test, id did not match.");
+        myDataRef.push({id: "yelpID", yes: 1, total: 1});//need to replace yelpID with the actual ID from the API
+      }
+    }
       //myDataRef.set({id: "yelpID", yes: 1, total: 1});
       myDataRef.orderByValue().once('value', function(snapshot){
       console.log(snapshot.val().id);
