@@ -14,8 +14,10 @@
   <body>
     <div class="box">
       <div class="jumbotron">
+        <div class="test">
         <img src="http://i.imgur.com/LF4PLeE.png?1" id="martini">
         <h1 class="title">CardMe</h1>
+        </div>
         <p id="name">We detect you are at </p>
         <h2 id="cardedText">Were you carded?</h2>
         <a href="percent.html"><button class="decision" id="yesButton">Yes</button></a>
@@ -36,11 +38,14 @@
     <script type="text/javascript">
     $(document).ready(function(){
         $('.title').hide().fadeIn(1500);
-        $('#cardedText').hide().delay(1500).fadeIn(1500);
-        $('.decision').hide().delay(1501).fadeIn(1501);
-        $('#babyText').hide().delay(1502).fadeIn(1502);
-        $('#babyText2').hide().delay(1503).fadeIn(1503);
-        $('#name').hide().delay(1504).fadeIn(1504);
+        $('#martini').hide().fadeIn(1500);
+        $('.test').delay(2500).animate({'marginTop': '-150px'}, 2000);
+        // $('#martini').hide().animate({'marginTop': '-150px'}, 2000);
+        $('#cardedText').hide().delay(3000).fadeIn(1500);
+        $('.decision').hide().delay(3001).fadeIn(1501);
+        $('#babyText').hide().delay(3002).fadeIn(1502);
+        $('#babyText2').hide().delay(3003).fadeIn(1503);
+        $('#name').hide().delay(3004).fadeIn(1504);
     });
     </script>
     <script>
