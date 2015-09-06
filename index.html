@@ -18,6 +18,7 @@
         <h2 id="cardedText">Were you carded?</h2>
         <a href="percent.html"><button class="decision" id="yesButton">Yes</button></a>
         <a href="percent.html"><button class="decision" id="noButton">No</button></a>
+        <button class="decision" id="change">This is not the establishment I am in</button>
         <h2 id="babyText">By clicking the buttons above, you verify that you are age 21 or older.</h2>
         <p></br></p>
         <footer>
@@ -28,6 +29,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/oauth.js"></script>
+    <script type="text/javascript" src="http://oauth.googlecode.com/svn/code/javascript/sha1.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
         $('.title').hide().fadeIn(1500);
@@ -91,6 +94,94 @@
      })
    })
   });
+  var i = 0
+  function getLocation() {
+  if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else {
+  console.log("Geolocation is not supported by this browser");
+  }
+  }
+  function showPosition(position) {
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
+  /* start yelp API stuff */
+  var auth = {
+  //
+  // Update with your auth tokens.
+  //
+  consumerKey : "FW5gEDvoRIRNmoCMDfXC7A",
+  consumerSecret : "ldRBVRQSFIk3uGPMWORsVjF8454",
+  accessToken : "hDnMbTUpUuOZHJ-iW6xQGD67DWkwDe7R",
+  // This example is a proof of concept, for how to use the Yelp v2 API with javascript.
+  // You wouldn't actually want to expose your access token secret like this in a real application.
+  accessTokenSecret : "SbfHc9ejuyZidAWR6JHnzTrEkxw",
+  serviceProvider : {
+  signatureMethod : "HMAC-SHA1"
+  }
+  };
+  var terms = 'bar';
+  var near = 'Philadelphia';
+  var accessor = {
+  consumerSecret : auth.consumerSecret,
+  tokenSecret : auth.accessTokenSecret
+  };
+  console.log(parseFloat(latitude)+','+parseFloat(longitude))
+  parameters = [];
+  parameters.push(['term', terms]);
+  //parameters.push(['location', near]);
+  parameters.push(['ll', parseFloat(latitude)+","+parseFloat(longitude)]);
+  parameters.push(['callback', 'cb']);
+  parameters.push(['oauth_consumer_key', auth.consumerKey]);
+  parameters.push(['oauth_consumer_secret', auth.consumerSecret]);
+  parameters.push(['oauth_token', auth.accessToken]);
+  parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
+  var message = {
+  'action' : 'http://api.yelp.com/v2/search',
+  'method' : 'GET',
+  'parameters' : parameters
+  };
+  console.log("Parameters: " + message.parameters);
+  OAuth.setTimestampAndNonce(message);
+  OAuth.SignatureMethod.sign(message, accessor);
+  var parameterMap = OAuth.getParameterMap(message.parameters);
+  console.log(parameterMap);
+  $.ajax({
+  'url' : message.action,
+  'data' : parameterMap,
+  'dataType' : 'jsonp',
+  'jsonpCallback' : 'cb',
+  'success' : function(data, textStats, XMLHttpRequest) {
+  console.log(data);
+  $('#name').append(data.businesses[i].name);
+  $('#image').append('<br><img src='+data.businesses[i].image_url+'>');
+  var yelpID = data.businesses[i].id;
+  $('#change').click(function() {
+  i++;
+  $('#name').replaceWith(data.businesses[i].name);
+  $('#image').replaceWith('<br><img src='+data.businesses[i].image_url+'>');
+  yelpID = data.businesses[i].id;
+  });
+  }
+  });
+  }
+  function showError(error) {
+  switch(error.code) {
+  case error.PERMISSION_DENIED:
+  console.log("User denied the request for Geolocation.");
+  break;
+  case error.POSITION_UNAVAILABLE:
+  console.log("Location information is unavailable.");
+  break;
+  case error.TIMEOUT:
+  console.log("The request to get user location timed out.");
+  break;
+  case error.UNKNOWN_ERROR:
+  console.log("An unknown error occurred.");
+  break;
+  }
+  }
+  getLocation();
 
     </script>
   </body>
